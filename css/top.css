@@ -1,0 +1,245 @@
+/* ヒーローセクション */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: right;
+  padding: 3rem;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 
+    4px 4px 0 #111,
+    -1px -1px 0 #111,
+    1px -1px 0 #111,
+    -1px 1px 0 #111,
+    1px 1px 0 #111;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-shadow: 
+    3px 3px 0 #111,
+    -1px -1px 0 #111,
+    1px -1px 0 #111,
+    -1px 1px 0 #111,
+    1px 1px 0 #111;
+}
+
+.hero-cta .btn {
+  background: #fff;
+  color: #111;
+  border-color: #111;
+  box-shadow: 4px 4px 0 #111;
+}
+
+.hero-cta .btn:hover {
+  background: #111;
+  color: #fff;
+  box-shadow: 4px 4px 0 #fff;
+}
+
+/* キャラクターカード */
+.character-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 3px solid #111;
+  overflow: hidden;
+}
+
+.character-image {
+  height: 250px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.character-info {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.character-info ul {
+  list-style: none;
+}
+
+.character-info li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.character-info li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff0066;
+}
+
+/* ギャラリーアイテム */
+.gallery-item {
+  background: #fff;
+  border: 3px solid #111;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image {
+  height: 200px;
+  background: #eee;
+  overflow: hidden;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.gallery-caption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 余白調整 */
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+}
+/* CONTACTセクション */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.contact-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #111;
+  background: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0 #111;
+}
+
+.contact-link:hover {
+  background: #111;
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #ff0066;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+/* 製作者カード */
+.contact-maker-inner {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contact-maker-icon {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.contact-maker-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #111;
+}
+
+.contact-maker-info {
+  flex: 1;
+}
+
+/* 読点の字間調整 */
+.kutouten {
+  letter-spacing: -0.5em;
+  margin-light: -0.1em;
+}

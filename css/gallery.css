@@ -1,0 +1,97 @@
+/* ギャラリーページ */
+
+.section-quote {
+  padding-top: 6rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-card {
+  background: #fff;
+  border: 3px solid #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 #111;
+}
+
+.gallery-thumb {
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 3px solid #111;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumb:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-caption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: #fff;
+  border: 3px solid #111;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  z-index: 2001;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #111;
+  color: #fff;
+}
+
+.modal-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 3px solid #fff;
+}

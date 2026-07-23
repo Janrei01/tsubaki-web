@@ -1,0 +1,65 @@
+/* フェードイン（スクロール連動） */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* テキストタイプ風（擬似） */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #111;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #111; }
+}
+
+/* ポスター風カード */
+.poster-card {
+  background: #fff;
+  border: 3px solid #111;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poster-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0 #111;
+}
+
+/* ネオブルータリズム風のアクセント */
+.accent-box {
+  background: #ff0066;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 背景パターン（オプション） */
+.bg-pattern {
+  background-image: 
+    linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
