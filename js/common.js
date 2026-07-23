@@ -47,3 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollFade();
   initScrollToTop();
 });
+
+// ハンバーガーメニュー
+function initHamburger() {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+  // メニューリンクをクリックしたら閉じる
+  const navLinks = nav.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+}
+
+// DOMContentLoaded に追加
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollFade();
+  initScrollToTop();
+  initHamburger();
+});
