@@ -16,11 +16,6 @@ function initScrollFade() {
   fadeElements.forEach(el => observer.observe(el));
 }
 
-// ページ読み込み時
-document.addEventListener('DOMContentLoaded', () => {
-  initScrollFade();
-});
-
 // トップへ戻るボタン
 function initScrollToTop() {
   const btn = document.createElement('button');
@@ -42,12 +37,6 @@ function initScrollToTop() {
   });
 }
 
-// DOMContentLoaded 内に追加
-document.addEventListener('DOMContentLoaded', () => {
-  initScrollFade();
-  initScrollToTop();
-});
-
 // ハンバーガーメニュー
 function initHamburger() {
   const hamburger = document.getElementById('hamburger');
@@ -60,7 +49,6 @@ function initHamburger() {
     nav.classList.toggle('active');
   });
 
-  // メニューリンクをクリックしたら閉じる
   const navLinks = nav.querySelectorAll('a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -70,7 +58,7 @@ function initHamburger() {
   });
 }
 
-// DOMContentLoaded に追加
+// ページ読み込み時
 document.addEventListener('DOMContentLoaded', () => {
   initScrollFade();
   initScrollToTop();
