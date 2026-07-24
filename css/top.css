@@ -243,3 +243,13 @@
   letter-spacing: -0.5em;
   margin-light: -0.1em;
 }
+
+/* 潜のアクセントカラー */
+.accent-box--kugu {
+  background: #6ba828;
+  color: #fff;
+}
+
+.character-info--kugu li::before {
+  color: #6ba828;
+}
