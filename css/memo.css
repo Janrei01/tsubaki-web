@@ -1,0 +1,117 @@
+/* MEMOページ */
+
+.section-quote {
+  padding-top: 6rem;
+}
+
+.memo-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.memo-section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid #111;
+}
+
+.memo-block {
+  margin-bottom: 2.5rem;
+}
+
+.memo-category {
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 0.3rem 1rem;
+}
+
+.memo-list {
+  background: #fff;
+  border: 3px solid #111;
+}
+
+.memo-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-bottom: 2px solid #111;
+}
+
+.memo-row:last-child {
+  border-bottom: none;
+}
+
+.memo-row dt {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: #f5f5f5;
+  border-right: 2px solid #111;
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: 0.05em;
+}
+
+.memo-row dd {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 会話ブロック */
+.memo-chat {
+  background: #fff;
+  border: 3px solid #111;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.memo-chat p {
+  font-size: 0.95rem;
+  line-height: 2;
+  margin-bottom: 0.5rem;
+}
+
+.memo-chat p:last-child {
+  margin-bottom: 0;
+}
+
+.memo-chat-label {
+  font-size: 0.8rem !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ff0066;
+  margin-bottom: 0.5rem !important;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .memo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .memo-row dt {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    background: #111;
+    color: #fff;
+  }
+}
