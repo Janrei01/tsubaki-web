@@ -1,3 +1,14 @@
+/* リセットとベース */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
 /* ヒーローセクション */
 .hero {
   height: 100vh;
@@ -241,15 +252,11 @@
 /* 読点の字間調整 */
 .kutouten {
   letter-spacing: -0.5em;
-  margin-light: -0.1em;
+  margin-left: -0.1em;
 }
 
 /* 潜のアクセントカラー */
-.accent-box--kugu {
+.accent-box.accent-box--kugu {
   background: #6ba828;
   color: #fff;
-}
-
-.character-info--kugu li::before {
-  color: #6ba828;
 }
